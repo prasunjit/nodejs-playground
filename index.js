@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
+
+const decodeSong = require('./songDecoder')
  
 app.get('/', (req, res) => {
+  console.log(decodeSong.songDecoder('AWUBBUCWUBA'))
   res
     .status(200)
     .send('Hello, world!')
